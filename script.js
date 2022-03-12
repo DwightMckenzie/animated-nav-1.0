@@ -22,65 +22,20 @@ function toggleNav() {
   // toggle 
   overlay.classList.toggle('overlay-active');
   if(overlay.classList.contains('overlay-active')){
-    // animate in overlay
-    // overlay.classList.add('overlay-slide-right');
-    // overlay.classList.remove('overlay-slide-left');
-
-    // animate in reduced version
+    // animate in
     overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
-    
-    // animate in menu bar
-    // nav1.classList.remove('slide-out-1');
-    // nav1.classList.add('slide-in-1');
-    // nav2.classList.remove('slide-out-2');
-    // nav2.classList.add('slide-in-2');
-    // nav3.classList.remove('slide-out-3');
-    // nav3.classList.add('slide-in-3');
-    // nav4.classList.remove('slide-out-4');
-    // nav4.classList.add('slide-in-4');
-    // nav5.classList.remove('slide-out-5');
-    // nav5.classList.add('slide-in-5');
-
     // Pass paramters to function
     navAnimate('out','in');
-    
   } else {
     // animate out
-    // overlay.classList.add('overlay-slide-left');
-    // overlay.classList.remove('overlay-slide-right');
-    
-    // animate out reduced version
     overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
-    
-    // animate in menu bar
-    // nav1.classList.remove('slide-in-1');
-    // nav1.classList.add('slide-out-1');
-    // nav2.classList.remove('slide-in-2');
-    // nav2.classList.add('slide-out-2');
-    // nav3.classList.remove('slide-in-3');
-    // nav3.classList.add('slide-out-3');
-    // nav4.classList.remove('slide-in-4');
-    // nav4.classList.add('slide-out-4');
-    // nav5.classList.remove('slide-in-5');
-    // nav5.classList.add('slide-out-5');
-    
     // Pass paramters to function
     navAnimate('in','out');
-
   }
 }
 
 // event listeners
 menuBars.addEventListener('click', toggleNav);
-
-// Add event liteners to nav items
-// nav1.addEventListener('click', toggleNav);
-// nav2.addEventListener('click', toggleNav);
-// nav3.addEventListener('click', toggleNav);
-// nav4.addEventListener('click', toggleNav);
-// nav5.addEventListener('click', toggleNav);
-
-// Add event liteners to nav items Reduced version
 navItms.forEach((nav) => {
   nav.addEventListener('click', toggleNav);
 });
